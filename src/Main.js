@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 
 var baseUrl = "https://s3.amazonaws.com/freecodecamp/";
@@ -31,13 +31,13 @@ class Main extends React.Component {
 	    new Audio(baseUrl+audio[r]).play();
 	    arr[r].style = 'background-color: green;';
 	    setTimeout(function(){
-      	    if (r==0) {
+      	    if (r===0) {
       	    	arr[r].style = 'background-color: red;';
       	    }
-      	    else if (r==1) {
+      	    else if (r===1) {
       	    	arr[r].style = 'background-color: black;';
       	    }
-      	    else if (r==2) {
+      	    else if (r===2) {
       	    	arr[r].style = 'background-color: blue;';
       	    }
       	    else
@@ -79,13 +79,13 @@ class Main extends React.Component {
 	        new Audio(baseUrl+audio[item]).play();
 	        arr[item].style = 'background-color: green;';
 	        setTimeout(function(){
-	      	    if (item==0) {
+	      	    if (item===0) {
 	      	    	arr[item].style = 'background-color: red;';
 	      	    }
-	      	    else if (item==1) {
+	      	    else if (item===1) {
 	      	    	arr[item].style = 'background-color: black;';
 	      	    }
-	      	    else if (item==2) {
+	      	    else if (item===2) {
 	      	    	arr[item].style = 'background-color: blue;';
 	      	    }
 	      	    else
@@ -108,13 +108,13 @@ class Main extends React.Component {
    		var arr=[this.refs.red, this.refs.black, this.refs.blue, this.refs.orange];
    	    arr[button].style= 'background-color: green;';
    	  	setTimeout(function(){
-      	    if (button==0) {
+      	    if (button===0) {
       	    	arr[button].style = 'background-color: red;';
       	    }
-      	    else if (button==1) {
+      	    else if (button===1) {
       	    	arr[button].style = 'background-color: black;';
       	    }
-      	    else if (button==2) {
+      	    else if (button===2) {
       	    	arr[button].style = 'background-color: blue;';
       	    }
       	    else
@@ -125,11 +125,11 @@ class Main extends React.Component {
   		new Audio(baseUrl + audio[button]).play();
       	this.state.arrClicked.push(button);
       	for(var i=0; i<this.state.arrFired.length; i++) {
-				if (this.state.arrClicked[i]==undefined) {
+				if (this.state.arrClicked[i]===undefined) {
 		     		break;
 		     	}
-				else if (this.state.arrClicked[i] != this.state.arrFired[i]) {
-					if(this.state.strict==false) {
+				else if (this.state.arrClicked[i] !== this.state.arrFired[i]) {
+					if(this.state.strict===false) {
 			        	this.setState({
 			      		arrClicked:[],
 					    message: "Wrong! Please listen and try again.",
@@ -149,12 +149,12 @@ class Main extends React.Component {
 					}
 				}
 
-				else if (this.state.arrClicked.length==10 && i==this.state.arrFired.length-1 && (this.state.arrClicked[i] == this.state.arrFired[i])) {
+				else if (this.state.arrClicked.length===10 && i===this.state.arrFired.length-1 && (this.state.arrClicked[i] === this.state.arrFired[i])) {
 					this.setState({
 						message: "Game over. You won!"
 					}
 						,() => {
-								if (this.state.message=="Game over. You won!") {
+								if (this.state.message==="Game over. You won!") {
 									setTimeout(function(){
 							           window.location.reload();
 							         },2500);
@@ -166,7 +166,7 @@ class Main extends React.Component {
 					
 				}
 				
-				else if (i==this.state.arrFired.length-1 && this.state.arrFired.length!=10) {
+				else if (i===this.state.arrFired.length-1 && this.state.arrFired.length!==10) {
 					this.setState({
 						message: "Keep it up!"
 					});
