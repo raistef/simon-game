@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Lemonada|Indie+Flower|Sedgwick+Ave+Display');
+@media screen and (min-width: 768px) {
+  body {
+    border-top:orange 20px outset;
+    border-left:var(--red) 200px double;
+    border-right:var(--red) 200px double;
+    border-bottom:orange 20px inset;
+  }
+}
+
+html{
+    height: 100%;
+}
+
+body {
+  --red:rgba(179, 36, 0, 1);
+  --blue:rgba(0, 82, 204, 0.9);
+  padding-top:20px;
+  background-color:rgb(173, 235, 173);
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  
+  height: 100%;
+
+}
+
+
+#count {
+  background-color:white;
+  border-radius:20px;
+  width:30px;
+  padding:0 7px;
+}
+
+#spanCount {
+  margin-left:10px;
+}
+
+
+#newGame {
+  position:relative;
+  bottom:-25px;
+  z-index:100;
+  margin-top:-5px;
+  background-color:orange;
+  color:white;
+  text-shadow: 1px 1px black;
+  padding:2px 5px;
+  font-size:120%;
+  border-radius:20px;
+  font-family: cursive;
+  font-weight:bold;
+  width:140px;
+  height:50px;
+}
+
+#s {
+  color:var(--red);
+  text-shadow: 2px 2px rgb(128, 26, 0);
+}
+h1 {
+  color:var(--blue);
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size:400%;
+  border-radius: 20px; 
+  background-color: ;
+  text-shadow: 1px 2px black;
+}
+
+.btn {
+  margin:10px;
+  height:100px;
+  width:200px;
+ 
+ }
+
+#red {
+  background-color:var(--red);
+  border-top-left-radius:100%;
+  position:relative;
+  bottom:-50px;
+}
+
+#black {
+  background-color:black;
+  border-top-right-radius:100%;
+  position:relative;
+  bottom:-50px;
+}
+
+#blue {
+  
+  background-color:blue;
+  border-bottom-left-radius:100%;
+}
+
+#orange {
+  background-color:orange;
+  border-bottom-right-radius:100%;
+}
+
+#Copyright {
+  color:black; 
+  font-family: "Times New Roman", Times, serif;
+  font-size:50%;
+  position:fixed;
+  bottom: -10px;
+  left:45%;
+}
+
+#buttons {
+  margin-top:-50px;
+}
+
+#message {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  display:block;
+  margin:auto;
+}
+
+#invisible {
+  background-color:orange;
+  border-bottom-right-radius:100%;
+  opacity:0.5;
+}
+.switch {
+  position:relative;
+  bottom:3px;
+}
+
+#top {
+  width:100%;
+}
+
+
+
+
+/*the code below is inspired from
+W3schools*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--red);
+
+}
+
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+hr {
+  width:300px;
+}
+
+@media screen and (max-width: 768px) {
+  
+    .btn {
+      margin:5px;
+      height:50px;
+      width:100px;
+     }
+
+     #newGame {
+      font-size:80%;
+      width:100px;
+      height:30px;
+      margin-top:15px;
+    }
+  
+}
